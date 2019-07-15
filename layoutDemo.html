@@ -1,0 +1,571 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<meta name="viewport"-->
+          <!--content="width=device-width, user-scalable=no,initial-scale=1, maximum-scale=1, minimum-scale=1,viewport-fit=cover">-->
+    <!--<title>皮皮虾</title>-->
+    <!--<style>-->
+        <!--*{-->
+            <!--margin:0;-->
+            <!--padding:0;-->
+        <!--}-->
+        <!--#app{-->
+            <!--max-width: 600px;-->
+            <!--/*width:600px;*/-->
+            <!--margin: 0 auto;-->
+        <!--}-->
+        <!--.header {-->
+            <!--width: 100%;-->
+            <!--height: 1.33333rem;-->
+            <!--background: #333;-->
+            <!--display: -webkit-box;-->
+            <!--display: -ms-flexbox;-->
+            <!--display: flex;-->
+            <!-- -webkit-box-align: center;-->
+            <!-- -ms-flex-align: center;-->
+            <!--align-items: center;-->
+            <!--background: url(https://s3b.ribaoapi.com/bds/static/assets/titlePic@2x-3a0f084c.png);-->
+            <!--background-size: contain;-->
+            <!-- -webkit-box-pack: end;-->
+            <!-- -ms-flex-pack: end;-->
+            <!--justify-content: flex-end;-->
+        <!--}-->
+        <!--.header-openBtn{-->
+            <!--width: 1.49333rem;-->
+            <!--height:.66667rem;-->
+            <!--text-align: center;-->
+            <!--line-height:.66667rem;-->
+            <!--background: -webkit-gradient(linear,left top,right top,from(#ff506c),to(#ff808b));-->
+            <!--background: linear-gradient(90deg,#ff506c,#ff808b);-->
+            <!--color: #fff;-->
+            <!--font-size: 13px;-->
+            <!--font-weight: 700;-->
+            <!--border-radius: .37333rem;;-->
+            <!--margin-right: .4rem;-->
+            <!--cursor: pointer;-->
+           <!--text-decoration: none;-->
+            <!--letter-spacing: .02667rem;-->
+        <!--}-->
+        <!--.user-info{-->
+            <!--display: -webkit-box;-->
+            <!--display: -ms-flexbox;-->
+            <!--display: flex;-->
+            <!-- -webkit-box-orient: horizontal;-->
+            <!-- -webkit-box-direction: normal;-->
+            <!-- -ms-flex-direction: row;-->
+            <!--flex-direction: row;-->
+            <!-- -webkit-box-align: center;-->
+            <!-- -ms-flex-align: center;-->
+            <!--align-items: center;-->
+            <!--padding: .4rem .4rem .21333rem .4rem;-->
+        <!--}-->
+        <!--.user-avatar-wrapper{-->
+            <!--position:relative;-->
+        <!--}-->
+        <!--.user-avatar{-->
+            <!--width: .85333rem;-->
+            <!--height: .85333rem;-->
+            <!--border-radius: 50%;-->
+        <!--}-->
+        <!--.clearfix:after {-->
+            <!--content: "";-->
+            <!--display: block;-->
+            <!--clear: both;-->
+        <!--}-->
+        <!--.user-name{-->
+            <!-- -webkit-box-flex: 1;-->
+            <!-- -ms-flex: 1;-->
+            <!--flex: 1;-->
+            <!--margin-left: .21333rem;-->
+            <!--padding-right: .05333rem;-->
+            <!--font-size: 16px;-->
+            <!--color: #333;-->
+            <!--max-width: 7.38667rem;-->
+            <!--overflow: hidden;-->
+            <!--white-space: nowrap;-->
+            <!--text-overflow: ellipsis;-->
+            <!--font-weight: 700;-->
+        <!--}-->
+        <!--.follow-btn{-->
+            <!--font-size: 14px;-->
+            <!--font-weight: 500;-->
+            <!--color: #ff6880;-->
+            <!--text-decoration: none;-->
+        <!--}-->
+        <!--.content{-->
+            <!--width: 9.2rem;-->
+            <!--line-height: .64rem;-->
+            <!--margin: 0 auto .21333rem;-->
+            <!--color: #000;-->
+            <!--font-size: 17px;-->
+            <!--word-break: break-all;-->
+        <!--}-->
+        <!--.imgs img{-->
+            <!--margin:0 auto .05333rem auto;-->
+            <!--width: 10rem;-->
+        <!--}-->
+        <!--.status-container{-->
+            <!--display: -webkit-box;-->
+            <!--display: -ms-flexbox;-->
+            <!--display: flex;-->
+            <!-- -webkit-box-orient: horizontal;-->
+            <!-- -webkit-box-direction: normal;-->
+            <!-- -ms-flex-direction: row;-->
+            <!--flex-direction: row;-->
+            <!-- -webkit-box-align: center;-->
+            <!-- -ms-flex-align: center;-->
+            <!--align-items: center;-->
+            <!--background: #fff;-->
+            <!--margin: 0 .4rem;-->
+            <!--padding: 0 .4rem;-->
+            <!--height: 1.46667rem;-->
+            <!-- -webkit-box-pack: justify;-->
+            <!-- -ms-flex-pack: justify;-->
+            <!--justify-content: space-between;-->
+        <!--}-->
+        <!--.cell{-->
+            <!--font-size: 12px;-->
+            <!--line-height: .64rem;-->
+            <!--color: #333;-->
+            <!--display: -webkit-box;-->
+            <!--display: -ms-flexbox;-->
+            <!--display: flex;-->
+            <!-- -webkit-box-orient: horizontal;-->
+            <!-- -webkit-box-direction: normal;-->
+            <!-- -ms-flex-direction: row;-->
+            <!--flex-direction: row;-->
+            <!-- -webkit-box-align: center;-->
+            <!-- -ms-flex-align: center;-->
+            <!--align-items: center;-->
+        <!--}-->
+        <!--.icon{-->
+            <!--width:.64rem;-->
+            <!--height:.64rem;-->
+        <!--}-->
+        <!--.fl {-->
+            <!--float: left;-->
+        <!--}-->
+        <!--.content-dividor{-->
+            <!--width: 100%;-->
+            <!--height: .21333rem;-->
+            <!--background-color: #f9f9f9;-->
+        <!--}-->
+        <!--.recommends {-->
+            <!--width: 9.2rem;-->
+            <!--margin: 0 .4rem auto;-->
+            <!--background-color: #fff;-->
+            <!--padding-bottom:2.4rem;-->
+        <!--}-->
+        <!--.recommend-header{-->
+            <!--height: .64rem;-->
+            <!--line-height: .64rem;-->
+            <!--display: -webkit-box;-->
+            <!--display: -ms-flexbox;-->
+            <!--display: flex;-->
+            <!-- -webkit-box-orient: horizontal;-->
+            <!-- -webkit-box-direction: normal;-->
+            <!-- -ms-flex-direction: row;-->
+            <!--flex-direction: row;-->
+            <!-- -webkit-box-align: center;-->
+            <!-- -ms-flex-align: center;-->
+            <!--align-items: center;-->
+            <!--padding: .69333rem 0 .58667rem;-->
+        <!--}-->
+        <!--.recommend-header img{-->
+            <!--margin-left: -.10667rem;-->
+            <!--width: .64rem;-->
+            <!--height: .64rem;-->
+        <!--}-->
+        <!--.recommend-header span{-->
+            <!--margin-left: .13333rem;-->
+            <!--font-size: 14px;-->
+            <!--font-weight: 700;-->
+            <!--color: #333;-->
+        <!--}-->
+        <!--.recomment-item{-->
+            <!--position: relative;-->
+            <!--width: 4.53333rem;-->
+            <!--margin-bottom: .08rem;-->
+        <!--}-->
+        <!--.recomment-item i{-->
+            <!--position: absolute;-->
+            <!--top: 2.4rem;-->
+            <!--left: 1.68rem;-->
+            <!--display: block;-->
+            <!--width: 1.17333rem;-->
+            <!--height: 1.17333rem;-->
+            <!--background: url(https://s3.ribaoapi.com/bds/static/assets/playIcon@2x-22140127.png);-->
+            <!--background-size: 1.17333rem;-->
+        <!--}-->
+        <!--.recomment-item img{-->
+            <!--width: 4.53333rem;-->
+            <!--height: 6rem;-->
+            <!--background-size: 4.56rem 3.33333rem;-->
+            <!--border-radius: .16rem;-->
+        <!--}-->
+        <!--.reconmend-container .recomment-item:nth-child(2n+1){-->
+            <!--margin-right: .13333rem;-->
+        <!--}-->
+        <!--.spring {-->
+            <!-- -webkit-animation: spring-anim 1s linear forwards;-->
+            <!--animation: spring-anim 1s linear forwards;-->
+        <!--}-->
+        <!--.affix {-->
+            <!--position: fixed;-->
+            <!--z-index: 9000;-->
+            <!--bottom: 0.62667rem;-->
+            <!-- -webkit-box-shadow: 0 -0.02667rem 0.18667rem rgba(0,0,0,.1);-->
+            <!--box-shadow: 0 -0.02667rem 0.18667rem rgba(0,0,0,.1);-->
+            <!--background: #fff;-->
+            <!--width: 9.2rem;-->
+            <!--height: 1.62667rem;-->
+            <!--display: -webkit-box;-->
+            <!--display: -ms-flexbox;-->
+            <!--display: flex;-->
+            <!-- -webkit-box-align: center;-->
+            <!-- -ms-flex-align: center;-->
+            <!--align-items: center;-->
+            <!--margin: 0 .4rem;-->
+            <!--border-radius: .8rem;-->
+        <!--}-->
+        <!--.affix .affix-header {-->
+            <!--width: 1.06667rem;-->
+            <!--height: 1.06667rem;-->
+            <!--background-size: 1.06667rem 1.06667rem;-->
+            <!--background-repeat: no-repeat;-->
+            <!--margin: 0 .24rem 0 .29333rem;-->
+            <!--position: relative;-->
+        <!--}-->
+        <!--.affix .affix-words {-->
+            <!--width: 5.36rem;-->
+            <!--margin-right: .4rem;-->
+            <!--color: #333;-->
+        <!--}-->
+        <!--.affix .affix-words .affix-user-name {-->
+            <!--font-size: 14px;-->
+            <!--font-weight: 700;-->
+            <!--overflow: hidden;-->
+            <!-- -webkit-line-clamp: 1;-->
+            <!--text-overflow: ellipsis;-->
+            <!--display: -webkit-box;-->
+            <!-- -webkit-box-orient: vertical;-->
+        <!--}-->
+        <!--.affix .affix-words .affix-word-slogan {-->
+            <!--font-size: 12px;-->
+            <!--white-space: nowrap;-->
+        <!--}-->
+        <!--.affix .affix-header-img {-->
+            <!--width: 1.06667rem;-->
+            <!--height: 1.06667rem;-->
+            <!--border-radius: 50%;-->
+        <!--}-->
+        <!--.affix .affix-btn {-->
+            <!--color: #fff;-->
+            <!--font-size: 13px;-->
+            <!--font-weight: 700;-->
+            <!--border-radius: .42667rem;-->
+            <!--width: 2.21333rem;-->
+            <!--height: .88rem;-->
+            <!--line-height: .64rem;-->
+            <!--white-space: nowrap;-->
+            <!--letter-spacing: .02667rem;-->
+            <!--margin-right: .4rem;-->
+        <!--}-->
+        <!--.btn {-->
+            <!--background: -webkit-gradient(linear,left top,right top,from(#ff506c),to(#ff808b));-->
+            <!--background: linear-gradient(90deg,#ff506c,#ff808b);-->
+            <!--border: 0;-->
+            <!--outline: none;-->
+            <!-- -webkit-box-shadow: 0 0.10667rem 0.21333rem rgba(255,63,93,.32);-->
+            <!--box-shadow: 0 0.10667rem 0.21333rem rgba(255,63,93,.32);-->
+            <!--cursor: pointer;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<div id="app">-->
+    <!--<div class="header clearfix">-->
+        <!--<a class="header-openBtn" href="https://www.kuailepipixia.com">打开</a>-->
+    <!--</div>-->
+    <!--<div class="user-info">-->
+          <!--<span class="user-avatar-wrapper">-->
+              <!--<img :src="author.avatar"  alt="" class="user-avatar">-->
+          <!--</span>-->
+        <!--<span class="user-name">{{author.nickname}}</span>-->
+        <!--<a class="follow-btn" href="https://www.kuailepipixia.com">关注</a>-->
+    <!--</div>-->
+    <!--<div class="content">{{content}}</div>-->
+    <!--<div class= "imgs">-->
+        <!--<img v-for="(item,index) in imgList" :src="item.url" :key="item.index">-->
+    <!--</div>-->
+    <!--<div class="status-container">-->
+        <!--<div class="cell">-->
+            <!--<a href="https://www.kuailepipixia.com">-->
+            <!--<img class="fl icon" src="data:image/png;base64,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" alt="">-->
+            <!--</a> <span class="stats-text">{{cmt_count}}</span>-->
+        <!--</div>-->
+        <!--<div class="cell">-->
+            <!--<a href="https://www.kuailepipixia.com">-->
+                <!--<img class="icon fl" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAYAAAA4TnrqAAAAAXNSR0IArs4c6QAABTVJREFUeAHtm0toXFUYgDMzdaZJZtTSSXSyqCJuREFsXtZkEXBhg0yt1KCLSm3BraKhakSwUJAqbhRdCS66UBQqWAqRLiSLQMwkKWJ9NA2dLEzaYsCqCTSZTBK/086UMyfzuHfuvUkm979wOOc/j//+57vnNXf+W1cnlxAQAkJACAgBISAEhIAQEAJCQAgIASEgBITAJhMIOLl/V1dXy+Li4qFAIPAUehJra2sRJ/q8bIuNGfRfIx4JBoNnRkdHZ+zerypYfX194enp6ZPAeZ0bbllAZWBkgPZZU1PTu4ODg0tl6hUU2YbV09MTnZ+fH0RLd4GmGhTUKAuFQvsZZf9ZMT9opZJeB1CnkWselOoTM2NfNpv9Su9fubStkdXe3p5cXV09ayj8gyd0irwL4XB43ijbMuLy8nIUOHsx6C3ix3TDWMMOjY2NfafnFUvvKJZZKg9Qbxhl55ubmw/YmfdG+40Wf2O9/SadTiswz+ZvDrw3SVeEZXlksfPFlpaW/kZxHnCGkfTQyMjIbP6mtRIzQ+6nH2lCfc7m1fr6+vjw8PCNcn2wvGZlMpk9Giil82ItglKGM+WuE/2s0rkryBHowbxQKrYMiym4y1CSNuSaEtXI0g1m3TL7pxffSluGxRZrTtm1ddpqKINNqcB+4Jn9W9cby7DWtfRhhsCy8dAFlsCyQcBG1fyZyUYT61VbW1vViXlPkc3BqpI/U6nUuNXKXtfzDFZbW9sJdpj3VQdWVlaq7gfAT01MTAxUrcDFhp6tWYA66pKdx1zS41iNZ7A4x4w5tu62gpRLehyr8WwaRqPRVxYWFlKMsAeqtZJT9Qzh82rbu93OM1hDQ0MLGPuR2wZvpj7PpuFmdsqrewssG2QFlsCyQcBGVRlZAssGARtV/TyydhqcbhryOtHPsBI6DX5xXNPlYmk/w2rRgTQ0NAgsHUg+3dvbG+FnmA7rBr84FvPlpWJfjqy5ubmnAXLHoYUp+HspQHq+L2EB4DkdAmnTJcEovi36DhZeQDuZggcNGt8bclHRd7B4bfQaJJo1GpfGx8cnNblk0lewuru7dzGqzFfUn5akYxT4Chb+DArMvRqDqVgs9oUml036BhZ/oBxnVB3WabALDnBkyOp55dK+gAWoFwClHO706zxr1Rk9o1J628PCF2sAUN8CQu/rFP5YL1WCY5Z79g7evNFGy52dnffxf+UnuEq9aNz7X+QDlRzXjDa3xG0HK+dNfRzH2n562Gh0+h/WqeeZfpeMfEvitoDV0dGxm1H0DD0+yDlqP3HM7D2QJnEjSOLGPWWWWZU9g4Wja4gPC57EyH2sGY9g0G6C+aSt2lmsXhi96jVLC6Du6CWvWN1z5B8GlJqCVV+uw8I3IY41/XgEHyFWn6hUbZwLDX/hT9q38SH9wQVdBTuEI32sFTvUWYaRdAVF7xAKXq45Um6vsXo6P2HHkWQy+YRboJQJrows1ozH+fLiS/QpF6MNvYCiPlS4SrhM+hzx2Zw3ch0Luau2OIKlPnhiur3HmqFG0l2mZRivXKi/JkwyHS8zJf4iuDIv0ZOJRCLXc24C5q09kZ3AepgF/AJWPVrEsit05sN4PH66hr6+KNKNwizLsBgly4VN6/aaizd1VggfNzY2nrDymtbQt+VFy7AAMwWILHGpNhc5xxxle57Y8r2u0sCQ1Xazs7M3E4nE3dRXX63ql/rQ8SQZL7OwzugF2y1d8asCvcOMqgA7Xz/xq+TfQ/iR8AG7zq96PUkLASEgBISAEBACQkAICAE7BP4HgRaUD8CddCMAAAAASUVORK5CYII="></img>-->
+            <!--</a> <span class="stats-text">{{like_count}}</span>-->
+        <!--</div>-->
+        <!--<div class="cell">-->
+            <!--<a href="https://www.kuailepipixia.com"> <img class="icon fl" src="data:image/png;base64,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"></img>-->
+            <!--</a> <span class="stats-text">{{share_count}}</span>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="content-dividor"></div>-->
+    <!--<div class="recommends clearfix">-->
+          <!--<div class="recommend-header">-->
+              <!--<img src="https://s3.ribaoapi.com/bds/static/assets/recommendPlay-3566b85c.png" alt="">-->
+              <!--<span>观看更多精彩视频</span>-->
+          <!--</div>-->
+        <!--<div class="reconmend-container">-->
+            <!--<div class="recomment-item fl" v-for="(item,index) in imgList" :key="item.index">-->
+                <!--<img :src="item.url" >-->
+           <!--<i class="recommend-play"  @click="openApp"></i>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="affix clearfix spring">-->
+        <!--<div class="affix-header fl">-->
+            <!--<img :src="author.avatar"   class="affix-header-img ">-->
+        <!--</div>-->
+        <!--<div class="affix-words">-->
+            <!--<p class="affix-user-name">皮皮侠 {{author.nickname}} </p>-->
+            <!--<span class="affix-word-slogan clearfix">-->
+            <!--<p class="fl">我在<span style="color: #f84e69;  font-weight: 700;margin: 0 .08rem">皮皮虾</span>邀你一起皮</p>-->
+            <!--</span>-->
+
+        <!--</div>-->
+        <!--<a href="https://www.kuailepipixia.com"><button class="affix-btn btn fl">关注ta</button></a>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<body>-->
+ <!--&lt;!&ndash;引用在线Vue&ndash;&gt;-->
+<!--<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>-->
+ <!--&lt;!&ndash;引用在线axios&ndash;&gt;-->
+<!--<script src="https://cdn.bootcss.com/axios/0.18.0/axios.js"></script>-->
+<!--<script>-->
+    <!--var vm = new Vue({-->
+        <!--el: "#app",-->
+        <!--data: function () {-->
+            <!--return {-->
+                <!--author: {}, //用户信息对象-->
+                <!--content:'',-->
+                <!--imgList:[],-->
+                <!--cmt_count:'',-->
+                <!--like_count:'',-->
+                <!--share_count:''-->
+            <!--}-->
+        <!--},-->
+        <!--created() {-->
+            <!--this.rem()-->
+            <!--//增加监听事件-->
+            <!--window.addEventListener('resize', this.rem);-->
+            <!--const _this = this;-->
+            <!--//获取页面信息-->
+            <!--axios.get("http://www.xwantech.com/doushe/api/v2/contents", {-->
+                <!--params: {-->
+                    <!--"type": 2,-->
+                    <!--"page": 1,-->
+                    <!--"uid": 601560,-->
+                    <!--"limit": 1-->
+                <!--}-->
+            <!--}).then(function (res) {-->
+              <!--if(res.data.code == 200) {-->
+                  <!--const data =  res.data.data[0]-->
+                  <!--_this.author = data.author-->
+                  <!--_this.content = data.content-->
+                  <!--_this.imgList = data.imgs.thumb_img_list-->
+                  <!--_this.cmt_count = data.cmt_count-->
+                  <!--_this.like_count = data.like_count-->
+                  <!--_this.share_count = data.share_count-->
+              <!--}else{-->
+                  <!--alert('网络失败，请刷新重试')-->
+              <!--}-->
+            <!--}).catch(function (err) {-->
+                <!--console.log(err)-->
+            <!--})-->
+        <!--},-->
+        <!--methods:{-->
+           <!--// 给页面增加宽度响应式适应-->
+            <!--rem() {-->
+                <!--var oEL = document.documentElement-->
+                <!--var oSize = oEL.clientWidth-->
+                <!--if( oEL.clientWidth<= 600){-->
+                    <!--document.documentElement.style.fontSize = oSize / 10 + "px";-->
+                <!--}else{-->
+                    <!--document.documentElement.style.fontSize = '60px'-->
+                <!--}-->
+            <!--},-->
+            <!--openApp() {-->
+                <!--window.location.href = "https://www.kuailepipixia.com"-->
+            <!--}-->
+        <!--}-->
+    <!--})-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!--<script src="http://oss.xwantech.com/h5/webpjs-0.0.2.min.js"></script>-->
+
+</head>
+<body>
+<div id="app">
+
+
+
+    <!--<div class= "imgs">-->
+
+        <!--<img src="http://doushe.oss-cn-beijing.aliyuncs.com/img/default/doushe-avatar-001.webp">-->
+
+        <!--<img src="http://doushe.oss-cn-beijing.aliyuncs.com/img/default/doushe-avatar-001.webp?x-oss-process=image/format,jpg">-->
+
+         <!--<img src="http://doushe.oss-cn-beijing.aliyuncs.com/img/default/douse_share_head.jpg">-->
+
+
+    <!--</div>-->
+</div>
+<script>
+
+    // 创建对象
+
+    // var o1 = {name:'a'}
+    // var M = function () {
+    //     this.name = 'a'
+    // }
+    // var o2 = new M()
+    // var o3 = new Object({name:"a"})
+    // var o4 = Object.create({name:'a'})
+
+
+    // 声明类
+
+   //  function Animal(){
+   //      this.name = 'name'
+   //  }
+   // Animal.prototype.say = function () {
+   //     console.log("hi")
+   // }
+   //  class Animal2{
+   //          constructor(){
+   //              this.name = 'name'
+   //          }
+   //  }
+   // function child() {
+   //     Animal.call(this)
+   //     this.age = 10
+   // }
+   //
+   //  function Parent2() {
+   //      this.name = "parent2"
+   //  }
+   //  function Child2(){
+   //       this.type = 'child2'
+   //  }
+   //  Child2.prototype = new Parent2()
+   //  console.info('1111')
+
+    //  var arr = [1,2,3]
+    //   console.log(arr.join(""))
+    //  var str = 'a-b-c'
+    // console.log(str.split('-'))
+    //
+    // var arr3 =[4,5,34,3453,3453,33,"哈哈哈哈"];
+    // var arr2 = arr3.join();
+    // console.log(arr2);\
+
+
+
+    // console.log(1);
+    // new Promise(function (resolve, reject) {
+    //     reject(true);
+    //     window.setTimeout(function () {
+    //         resolve(false);
+    //     }, 0);
+    // }).then(function () {
+    //     console.log(2);
+    // }, function () {
+    //     console.log(3);
+    // });
+    // console.log(4);
+
+
+    // console.log(1);
+    // new Promise(function (resolve, reject) {
+    //     console.log(5)
+    //     reject(true);
+    //     window.setTimeout(function () {
+    //         resolve(false);
+    //     }, 0);
+    // }).then(function () {
+    //     console.log(2);
+    // }, function () {
+    //     console.log(3);
+    // });
+    // console.log(4);
+
+    console.log('1');
+
+    //丢到宏事件队列中
+
+    setTimeout(function() {
+
+        console.log('2');
+
+        process.nextTick(function() {
+
+            console.log('3');
+
+        })
+
+        new Promise(function(resolve) {
+
+            console.log('4');
+
+            resolve();
+
+        }).then(function() {
+
+            console.log('5')
+
+        })
+
+    })
+
+    //微事件1
+
+    process.nextTick(function() {
+
+        console.log('6');
+
+    })
+
+    //主线程直接执行
+
+    new Promise(function(resolve) {
+
+        console.log('7');
+
+        resolve();
+
+    }).then(function() {
+
+        //微事件2
+
+        console.log('8')
+
+    })
+</script>
+  </body>
+
+
+
+</html>

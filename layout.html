@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--一行3列 左右各300 中间自适应 高度固定-->
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        /*浮动部分CSS*/
+        .float{
+            width:100%;
+        }
+
+        .float-left{
+            float: left;
+            width:300px;
+            background: #ff5645;
+            height:300px;
+        }
+        .float-right{
+            float: right;
+            width:300px;
+            background: blue;
+            height:300px;
+        }
+        .float-center{
+            background: yellow;
+            height:300px;
+        }
+
+        /*绝对定位部分CSS*/
+        .absolute{
+            width:100%;
+            margin-top:20px;
+        }
+        .abaolute-left{
+            position:absolute;
+            left:0;
+            width:300px;
+            height:100px;
+            background: #ff5645;
+        }
+        .abaolute-center{
+            position:absolute;
+            left:300px;
+            right:300px;
+            height:100px;
+            background: yellow;
+        }
+        .abaolute-right{
+            position:absolute;
+            right:0;
+            width:300px;
+            height:100px;
+            background: blue;
+        }
+
+        /*flex部分CSS*/
+        .flex{
+            display: flex;
+            margin-top:150px;
+        }
+        .flex-left{
+            width:300px;
+            background: #ff5645;
+            height:100px;
+        }
+        .flex-center{
+            flex: 1;
+            background: yellow;
+            height:100px;
+        }
+        .flex-right{
+            width:300px;
+            background: blue;
+            height:100px;
+        }
+        .table{
+            display: table;
+            width:100%;
+            margin-top:20px;
+        }
+        .table div{
+            display: table-cell;
+            height:100px;
+        }
+        .table-left{
+            width:300px;
+            background: #ff5645;
+        }
+        .table-center{
+            background: yellow;
+        }
+        .table-right{
+            width:300px;
+            background:blue;
+        }
+
+        /*grid部分CSS*/
+        .grid{
+            width:100%;
+            display: grid;
+            grid-template-rows: 100px;
+            grid-template-columns: 300px auto 300px;
+            margin-top:20px;
+        }
+        .grid-left{
+            background: #ff5645;
+        }
+        .grid-center{
+            background: yellow;
+        }
+        .grid-right{
+            background:blue;
+        }
+    </style>
+</head>
+
+<body>
+<!--五种方式实现左300px，右300p，中间自适应-->
+<!--浮动解决方案-->
+<section class="float">
+    <div class="float-left">左</div>
+    <div class="float-right">右</div>
+    <div class="float-center">
+        <h1>浮动中间</h1>
+    </div>
+</section>
+
+<!--绝对定位解决方案-->
+<section class="absolute">
+    <div class="abaolute-left"></div>
+    <div class="abaolute-center">
+        <h1>绝对定位中间</h1>
+    </div>
+    <div class="abaolute-right"></div>
+</section>
+
+<!--flex解决方案-->
+<section class="flex">
+    <div class="flex-left"></div>
+    <div class="flex-center">
+        <h1>flex中间</h1>
+    </div>
+    <div class="flex-right"></div>
+</section>
+
+
+<!--table布局解决方案-->
+<section class="table">
+    <div class="table-left"></div>
+    <div class="table-center">
+        <h1>table中间</h1>
+    </div>
+    <div class="table-right"></div>
+</section>
+
+<!--网格布局解决方案-->
+<section class="grid">
+    <div class="grid-left"></div>
+    <div class="grid-center">
+        <h1>grid中间</h1>
+    </div>
+    <div class="grid-right"></div>
+</section>
+
+
+<!--1.每个方案优缺点比较-->
+<!--浮动 需要清除浮动 脱离文档流 兼容性高 创建BFC-->
+<!--绝对定位 快捷 但是脱离文档流 有效性差-->
+<!--flex布局 完美 移动端大部分使用-->
+<!--table布局 其实比较适用-->
+<!--grid布局 新技术-->
+
+<!--2.假设高度不固定 考虑纵向-->
+<!--浮动、网格、绝对定位 不适用 -->
+
+3.那个最实用 兼容性
+
+</body>
+</html>
