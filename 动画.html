@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <style>
+        .transition{
+            background: red;
+            height:100px;
+            width:100px;
+            transition: width 2s;
+            -webkit-transition: width 2s,background 2s; /* Safari 和 Chrome */
+        }
+        .transition:hover{
+            width:200px;
+            background: green;
+        }
+        .transform{
+            width:100px;
+            background: black;
+            height:200px;
+            animation: keys1 2s ;
+        }
+        @keyframes keys1 {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(180deg);
+            }
+        }
+    </style>
+    <script>
+        function fn(a){
+            console.log(a);  //function(){}
+            var a = 2;
+            function a(){};
+            console.log(a); //2
+        }
+        fn(1);
+
+    </script>
+</head>
+<body>
+<div class="transition"></div>
+<div class="transform"></div>
+
+
+</body>
+</html>
