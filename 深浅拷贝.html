@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    // 浅拷贝    Object.assign()
+      var obj ={a:1,b:2}
+      var obj2 = Object.assign(obj)
+    //console.log(obj === obj2)
+      obj2.a = 3
+    //   console.log(obj.a)
+
+
+    //  深拷贝
+    // 只针对对象
+    // function deepCopy(o1){
+    //   var newobj = {}
+    //   for(key in o1){
+    //       if(typeof o1[key] === 'object' && o1[key] !== null){
+    //            newobj[key] = deepCopy(o1[key])
+    //       }else { 
+    //           newobj[key] =  o1[key] 
+    //    }     
+    //   }
+    //   return newobj
+    // }
+    // 数组对象
+       function deepCopy(target){
+           if(typeof target !== 'object') return ;
+           var newObj = target instanceof Array ? [] : {}
+           for(var item in target){
+               if(target.hasOwnProperty(item)){
+                   newObj[item] = typeof target[item] == 'object' ? deepCopy(target[item]) : target[item]
+               }
+           }
+        return newObj
+       }
+
+
+ console.log(deepCopy({a:[1,2,{a1:3}],b:1,c:2,d:{d1:1,d2:[1]}}))
+    const o1 = { a: 1 };
+    const o2 = { b: 2 };
+    const o3 = { c: 3 };
+    const obj4 = Object.assign(o1, o2, o3);
+    // console.log(o1)  
+    // console.log(o2)  
+    // console.log(o3)  
+    // console.log(obj4)  
+    // console.log(obj4 === o1)  
+         
+ </script>
+</body>
+</html>
