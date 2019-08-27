@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #a{
+            height:500px;
+            background: red;
+        }
+        #b{
+            height:400px;
+            background:green;
+        }
+        #c{
+            height:300px;
+            background:pink;
+        }
+        #d{
+            height:200px;
+            background:black;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="a">
+    <div id="b">
+        <div id="c">
+            <div id="d"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('a').addEventListener('click', function(e) {
+        console.log('target:' + e.target.id + '&currentTarget:' + e.currentTarget.id);
+    },false);
+    document.getElementById('b').addEventListener('click', function(e) {
+        console.log('target:' + e.target.id + '&currentTarget:' + e.currentTarget.id);
+    },false);
+    document.getElementById('c').addEventListener('click', function(e) {
+        console.log('target:' + e.target.id + '&currentTarget:' + e.currentTarget.id);
+    },false);
+    document.getElementById('d').addEventListener('click', function(e) {
+        console.log('target:' + e.target.id + '&currentTarget:' + e.currentTarget.id);
+    },false);
+</script>
+</body>
+</html>

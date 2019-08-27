@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <p>键盘长按空格2S 开始计时 屏幕显示计时的时间 松开后停止及时 事件清0</p>
+   <P id="timer"></P>
+<script>
+var t;
+var a = 0
+document.onkeydown = function(e){
+    var keyNum = e.keyCode 
+    if(keyNum = 32){
+        if(!t){
+            t = setTimeout(function(){
+                f1()
+            },1000)
+        }
+    }
+}
+var f1 = function(){
+     timer = setInterval(function(){
+            a +=1    
+            document.getElementById('timer').innerHTML = a               
+        },1000)
+}
+document.onkeyup = function(e){
+      clearTimeout(t)
+      t= null
+      a = 0
+      clearInterval(timer)
+      document.getElementById('timer').innerHTML = 0
+}
+
+
+</script>
+</body>
+</html>
