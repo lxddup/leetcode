@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布局</title>
+
+    <style>
+        .demo{
+            width:300px;
+            height:100px;
+            /*overflow: hidden;*/
+        }
+        .parent{
+            margin-top:10%;
+            /*padding-top:20%;*/
+            background: red;
+        }
+        .child{
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+<div class="demo">
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    </div>
+
+    <script>
+
+        var a = 'hello'
+        var b = {
+            a : 'world',
+            c: this.a,
+            some: function () {
+                console.log(1,this.a)
+                console.log(2,this.c)
+            },
+            asome : () => {
+                console.log(3,this.a)
+                console.log(4,this.c)
+            }
+        }
+        b.some()
+        var d = b.some
+        d()
+        b.asome()
+
+</script>
+</body>
+</html>

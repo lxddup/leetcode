@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>JS平方根计算- www.webdm.cn</title>
+</head>
+<body>
+<SCRIPT>
+// function Newton(Input){
+// // f(x) = x*x - Input.value
+// // f'(x) = 2*x
+// var X = 1;
+// var FX = X*X - Input;
+// for (var i = 0; i < 10; i++) {
+//     X = X - FX/(2*X);
+//     FX = X*X - Input;
+// }
+// return X
+// }
+
+function sqrt1(num){
+    var low = 0, uper = num , n = (low + uper)/2
+    if(num <= 0){ return }
+    while(n * n != num ){
+        if (n*n < num){
+            low = n ;
+            n = (low + uper) / 2
+        }else{
+            uper = n;
+            n = (low + uper) / 2
+        }
+    }
+    return n.toFixed(2)
+}
+console.log(sqrt1(250))
+
+// console.log(Newton(6))
+</SCRIPT>
+<CENTER>
+<!--    <H1>平方根计算</H1>-->
+<!--    <p>-->
+<!--    <hr>-->
+<!--    <b>-->
+<!--        <FORM METHOD=POST>输入平方数:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b><INPUT TYPE=TEXT NAME=Sqr SIZE=23 MAXLENGTH=10 onFocus="ClearForm(this.form)"></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+<!--    <b><INPUT TYPE="button" VALUE="计算" onClick="Newton(this.form.Sqr)">-->
+<!--        </FORM><BR CLEAR=ALL>-->
+<!--        <br>-->
+</body>
+</html>

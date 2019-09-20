@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+// 1. 实现下面这个方法：
+// 将一维数组切分成二维数组： 按照第二个参数（数字）的值，来决定二维数组长度
+// let a = ['a', 'b', 'c', 'd'];
+// let result = chunk(a, 3);
+// console.log(result) => [['a','b', 'c'], ['b']];
+// let result = chunk(a, 2);
+// console.log(result) => [['a','b'], ['c','b']];
+// let result = chunk(a, 1);
+// console.log(result) => [['a‘],['b‘],['c‘],['d']];
+
+
+
+function chunk(list,num){
+     const arr = []
+     arr[0] = list.slice(0,num)
+     for(let i = 0; i<list.length;i++){
+         if(arr[arr.length - 1].length === num){
+             arr.push([])
+         }
+         arr[arr.length - 1].push(list[i])
+     }
+     return arr
+}
+
+
+// 2.
+// 当前版本号为 v <major>. <minor>. <patch>，则版本号的增常策略如下：
+// 每次调用对应函数方法时，对应版本号 +1, 下级版本号清零，
+// 例子：
+// 当前版本号V0.11.13
+// 调用fn.minor()， 
+// 结果为V0.12.0，<minor> + 1， <patch>归 0
+// 需求：写一个模块函数，实现如下方法：
+// let version = V0.11.12;
+// fn.patch() // return => V0.11.13
+// fn.minor() // return => V0.12.0
+// fn.major() // return => V1.0.0
+// fn.rollback() // 回退到上一次的版本号
+let version   = 'V0.11.12'
+const fn = {
+    
+    patch: function(){
+        var arr = version.split('.')
+        arr[2] = parseInt(arr[2])+ 1
+        return arr.join('.')
+    },
+    minor: function(){
+        var arr = version.split('.')
+        arr[1] = parseInt(arr[1])+ 1
+        arr[2] = 0
+        return arr.join('.')
+    },
+    minmajoror: function(){
+        var arr = version.split('.')
+        arr[0] = parseInt(arr[1])+ 1
+        arr[1] = 0
+        arr[2] = 0
+        return arr.join('.')
+    },
+    rollback:function(){
+
+    }
+}
+
+// 3.
+// // 需求：写一个方法，可以利用字符串路径获取对象集合的值，当值不存在时返回错误信息
+
+// let object = {'a': [{'b': {'c': 3}}]};
+// let [err, result] = fn.get(object, 'a[0].b.c');
+// console.log(err, result); // => null, 3
+// let [err, result] = fn.get(object, 'a[0].d.c');
+// console.log(err, result); // => Is err about 'd', null
+// function fn() {
+//     /** about code **/
+// }
+
+
+
+
+// 4.
+// 按照调用实例，实现下面的Person方法：
+// Person("Li");
+// // 输出： Hi! This is Li!
+// Person("Dan").sleep(10).eat("dinner");
+// // 输出：
+// // Hi! This is Dan!
+// // 等待10秒..
+// // Wake up after 10
+// // Eat dinner~
+// Person("Jerry").eat("dinner").eat("supper");
+// // 输出：
+// // Hi This is Jerry!
+// // Eat dinner~
+// // Eat supper~
+// Person("Smith").sleepFirst(5).eat("supper");
+// // 输出：
+// // 等待5秒
+// // Wake up after 5
+// // Hi This is Smith!
+// // Eat supper
+
+
+</script>
+</body>
+</html>

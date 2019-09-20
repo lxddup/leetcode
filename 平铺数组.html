@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    // var a = function (arr) {
+    //     const  result = [].concat(...arr)
+    //     arr.forEach( function (result, item){
+    //         if(item instanceof Array ){
+    //             return a(item)
+    //         }else{
+    //           return result
+    //         }
+    //     })
+    //     return result
+    // }
+    // console.log(a([1,2,3,[4,[5,6,[7]]]]))
+    function flattenArray(arr) {
+        const flattened = [].concat(...arr);
+        return flattened.some(item => Array.isArray(item)) ?
+            flattenArray(flattened) : flattened;
+    }
+
+   console.log(flattenArray([1,2,3,[4,[5,6,[7]]]]))
+</script>
+</body>
+</html>
